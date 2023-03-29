@@ -9,20 +9,20 @@ public class GameManager {
         this.board = new Board(new int[3][3]);
     }
 
-    public boolean addPlayer(String name, int score, int symbol){
-        if (players.length > 2)
+    public void addPlayer(String name, int score, int symbol){
+        if (count < 2)
         {
             Player temp = new Player(name, score, symbol);
             this.players[count] = temp;
             count++;
-            return true;
-        }else{
-            return false;
         }
     }
 
-    public void startGame(Player[] players, Board board){
-        System.out.println(board.showBoard());
+    public Player getPlayer1(){ return players[0]; }
+    public Player getPlayer2(){
+        return players[1];
     }
+
+
 
 }

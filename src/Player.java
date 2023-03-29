@@ -32,4 +32,7 @@ public class Player {
     public void setSymbol(int symbol) {
         this.symbol = symbol;
     }
+    public int getOppositeSymbol(){
+        return -symbol;
+    }
 }
